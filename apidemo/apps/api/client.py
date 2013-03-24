@@ -28,7 +28,7 @@ class OAuthClient(object):
             data = parameters
         )
 
-        print "response.json: %s" % response.json()['access_token']
+        print "response.json: %s" % response.json()
         if response.status_code == 200:
             return (response.json()['access_token'], response.json()['refresh_token'])
         else:
