@@ -28,9 +28,9 @@ class OAuthClient(object):
             data = parameters
         )
 
-        print "response.json: %s" % response.json
+        print "response.json: %s" % response.json()['access_token']
         if response.status_code == 200:
-            return (response.json['access_token'], response.json['refresh_token'])
+            return (response.json()['access_token'], response.json()['refresh_token'])
         else:
             response.raise_for_status()
 
@@ -48,15 +48,15 @@ class OAuthClient(object):
             data = parameters
         )
 
-        print "response.json: %s" % response.json
+        print "response.json: %s" % response.json()
         if response.status_code == 200:
-            self.access_token = response.json['access_token']
-            return (response.json['access_token'], response.json['refresh_token'])
+            self.access_token = response.json()['access_token']
+            return (response.json()['access_token'], response.json()['refresh_token'])
         else:
             response.raise_for_status()
 
     def _get_resource(self, resource):
-	if self.access_token is None:
+        if self.access_token is None:
             raise Exception("access_token cannot be None")
 
         headers = {'Authorization': 'Bearer %s' % self.access_token}
@@ -66,9 +66,9 @@ class OAuthClient(object):
             headers=headers,
             verify=False,
         )
-	print "url: %s" % url
+        print "url: %s" % url
         print "response: %s" % response
-        print "response.json: %s" % response.json
+        print "response.json: %s" % response.json()
         print "response.text: %s" % response.text
         if response.status_code == 200:
             return response.text
