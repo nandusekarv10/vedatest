@@ -12,6 +12,8 @@ Go into the directory, and setup a virtual environment with python:
 
 ```cd api-example-django && virtualenv . --no-site-packages```
 
+Activate your virtualenv with ```source bin/activate```:
+
 Install the required packages with ```pip```:
 
 ```pip install -r requirements.txt```
