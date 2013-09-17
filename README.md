@@ -6,13 +6,15 @@ SNPedia.
 
 Clone the repo:
 
-```git clone git@github.com:23andMe/api-example-django.git```
+for Django 1.4.1: ```git clone git@github.com:23andMe/api-example-django.git```
+
+for Django 1.5.4: ```git clone -b django-1.5.4 git@github.com:23andMe/api-example-django.git```
 
 Go into the directory, and setup a virtual environment with python:
 
 ```cd api-example-django && virtualenv . --no-site-packages```
 
-Activate your virtualenv with ```source bin/activate```:
+Activate your virtualenv: ```source bin/activate```
 
 Install the required packages with ```pip```:
 
