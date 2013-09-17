@@ -1,15 +1,13 @@
 from django.conf.urls.defaults import *
 #from apidemo.views import index
-from django.views.generic.simple import direct_to_template
+from django.views.generic import TemplateView
 
 # Uncomment the next two lines to enable the admin:
 # from django.contrib import admin
 # admin.autodiscover()
 
 urlpatterns = patterns('',
-    url(r"^$", direct_to_template, {
-        "template": "docs.html",
-    }, name="home"),
+    url(r'^$', TemplateView.as_view(template_name="docs.html")),
 
     url(r'^auth/', include('api.urls')),
     url(r'^docs/', "apidemo.views.tutorial"),
@@ -26,4 +24,3 @@ import settings
 urlpatterns += patterns('',
     (r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
 )
-
