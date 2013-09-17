@@ -6,11 +6,7 @@ SNPedia.
 
 Clone the repo:
 
-for Django latest supported version: ```git clone git@github.com:23andMe/api-example-django.git```
-
-for Django 1.5: ```git clone -b django-1.5.x git@github.com:23andMe/api-example-django.git```
-
-for Django 1.4: ```git clone -b django-1.4.x git@github.com:23andMe/api-example-django.git```
+For Django 1.5.4: ```git clone git@github.com:23andMe/api-example-django.git```
 
 Go into the directory, and setup a virtual environment with python:
 
