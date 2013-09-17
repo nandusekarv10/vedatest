@@ -1,5 +1,5 @@
-from django.views.generic.simple import direct_to_template
+from django.shortcuts import render
 
 # FIXME rename docs.html tutorial.html
 def tutorial(request, template_name="docs.html", extra_context=None):
-    return direct_to_template(request, template=template_name, extra_context=extra_context)
+    return render(request, template=template_name, extra_context=extra_context)

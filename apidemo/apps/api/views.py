@@ -1,6 +1,5 @@
 from django.http import HttpResponse
 from django.shortcuts import redirect
-from django.views.generic.simple import direct_to_template
 import json
 import logging
 log = logging.getLogger("apidemo")
