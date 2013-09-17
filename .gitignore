@@ -1,4 +1,6 @@
 *.py[co]
+*.Python
+*.DS_Store
 
 # Virtualenv
 lib/
